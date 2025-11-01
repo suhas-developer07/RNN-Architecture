@@ -11,8 +11,9 @@ reverse_word_index = {value: key for key, value in word_index.items()}
 
 # Load the pre-trained model with ReLU activation
 model = load_model('simple_rnn_imdb.h5')
+print("HEllo world")
 
-# Step 2: Helper Functions
+# Step 2: Helper Functions-
 # Function to decode reviews
 def decode_review(encoded_review):
     return ' '.join([reverse_word_index.get(i - 3, '?') for i in encoded_review])
